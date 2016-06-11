@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.dxy.exercisecodefromblog.activity.CustomViewActivity;
 import com.dxy.exercisecodefromblog.camera.TakeCameraActivity;
+import com.dxy.exercisecodefromblog.picture.PictureActivity;
 import com.dxy.exercisecodefromblog.sensor.SensorActivity;
 
 import butterknife.ButterKnife;
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btCircleView;
     @InjectView(R.id.bt_sensor)
     Button btSensor;
+    @InjectView(R.id.bt_picture)
+    Button btPicture;
 
 
     private Context mContext;
@@ -42,6 +45,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btCircleView.setOnClickListener(this);
 
         btSensor.setOnClickListener(this);
+
+        btPicture.setOnClickListener(this);
     }
 
 
@@ -60,8 +65,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
 
-            case  R.id.bt_sensor:
+            case R.id.bt_sensor:
                 intent = new Intent(mContext, SensorActivity.class);
+
+                startActivity(intent);
+                break;
+
+            case R.id.bt_picture:
+                intent = new Intent(mContext, PictureActivity.class);
 
                 startActivity(intent);
                 break;

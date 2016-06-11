@@ -4,7 +4,7 @@
 
     <uses-permission
         android:name="android.permission.CAMERA"
-        android:required="true"></uses-permission>
+        android:required="true" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -22,7 +22,8 @@
         </activity>
         <activity android:name=".activity.CustomViewActivity" />
         <activity android:name=".camera.TakeCameraActivity" />
-        <activity android:name=".sensor.SensorActivity"></activity>
+        <activity android:name=".sensor.SensorActivity" />
+        <activity android:name=".picture.PictureActivity"></activity>
     </application>
 
 </manifest>
