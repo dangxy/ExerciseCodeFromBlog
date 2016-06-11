@@ -2,7 +2,6 @@ package com.dxy.exercisecodefromblog.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
@@ -39,7 +38,7 @@ public class CircleView extends View {
 
         mPaint = new Paint();
 
-        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStyle(Paint.Style.STROKE);
 
         mPaint.setAntiAlias(true);
 
@@ -95,20 +94,27 @@ public class CircleView extends View {
 
         canvas.translate(mWidth/2,mHeigth/2);
 
-        mPaint.setColor(Color.BLUE);
+//        mPaint.setColor(Color.BLUE);
+//
+//        mPaint.setStrokeWidth(20);
+//
+//        mPaint.setStyle(Paint.Style.STROKE);
 
-        mPaint.setStrokeWidth(20);
+//        for(int i = 0 ;i<=20;i++ ){
+//            canvas.scale(0.9f,0.9f);
+//
+//            canvas.drawCircle(0,0,mWidth/2,mPaint);
+//
+//        }
 
-        mPaint.setStyle(Paint.Style.STROKE);
+        canvas.drawCircle(0,0,400,mPaint);
 
+        canvas.drawCircle(0,0,380,mPaint);
 
+        for(int i = 0 ;i<=360;i+=10){
+            canvas.drawLine(0,380,0,400,mPaint);
 
-
-        for(int i = 0 ;i<=20;i++ ){
-            canvas.scale(0.9f,0.9f);
-
-            canvas.drawCircle(0,0,mWidth/2,mPaint);
-
+            canvas.rotate(10);
         }
 
 
