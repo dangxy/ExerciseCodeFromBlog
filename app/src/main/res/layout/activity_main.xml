@@ -10,14 +10,22 @@
         android:id="@+id/bt_circle_view"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:text="自定义view"
         android:minHeight="0dp"/>
     <Button
         android:id="@+id/bt_camera"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_margin="20dp"
+        android:layout_margin="15dp"
         android:text="相机练习"
+        android:minHeight="0dp"/>
+
+    <Button
+        android:id="@+id/bt_sensor"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:text="摇一摇"
         android:minHeight="0dp"/>
 </LinearLayout>

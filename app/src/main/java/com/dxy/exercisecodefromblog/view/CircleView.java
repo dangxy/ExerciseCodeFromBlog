@@ -45,11 +45,18 @@ public class CircleView extends View {
     }
 
     @Override
-    protected void onDraw(Canvas canvas) {
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
         mHeigth = getWidth();
 
         mWidth = getHeight();
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+
+
         mPaint.setColor(Color.BLACK);
 
         canvas.translate(200, 200);

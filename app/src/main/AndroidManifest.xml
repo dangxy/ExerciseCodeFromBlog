@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.dxy.exercisecodefromblog">
-    <uses-permission android:name="android.permission.CAMERA" android:required="true">
 
-
-    </uses-permission>
+    <uses-permission
+        android:name="android.permission.CAMERA"
+        android:required="true"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -20,7 +21,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.CustomViewActivity" />
-        <activity android:name=".camera.TakeCameraActivity"></activity>
+        <activity android:name=".camera.TakeCameraActivity" />
+        <activity android:name=".sensor.SensorActivity"></activity>
     </application>
 
 </manifest>
