@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dang="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <com.dxy.exercisecodefromblog.view.CircleView
         android:id="@+id/circle_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="200dp"
+        android:layout_height="200dp" />
 
-</RelativeLayout>
+    <com.dxy.exercisecodefromblog.view.attr.MyTextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        dang:text="textview文本"
+        dang:textAttr="112"/>
+
+</LinearLayout>
