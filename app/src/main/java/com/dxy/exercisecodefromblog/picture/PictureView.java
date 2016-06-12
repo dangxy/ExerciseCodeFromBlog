@@ -5,7 +5,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
@@ -53,6 +52,8 @@ public class PictureView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
 
-        canvas.drawBitmap(bitmap, new Matrix(), mPaint);
+        //canvas.drawBitmap(bitmap, new Matrix(), mPaint);
+
+        canvas.drawBitmap(bitmap,50,100,mPaint);
     }
 }

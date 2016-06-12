@@ -23,7 +23,8 @@
         <activity android:name=".activity.CustomViewActivity" />
         <activity android:name=".camera.TakeCameraActivity" />
         <activity android:name=".sensor.SensorActivity" />
-        <activity android:name=".picture.PictureActivity"></activity>
+        <activity android:name=".picture.PictureActivity" />
+        <activity android:name=".path.PathActivity"></activity>
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.dxy.exercisecodefromblog.activity.CustomViewActivity;
 import com.dxy.exercisecodefromblog.camera.TakeCameraActivity;
+import com.dxy.exercisecodefromblog.path.PathActivity;
 import com.dxy.exercisecodefromblog.picture.PictureActivity;
 import com.dxy.exercisecodefromblog.sensor.SensorActivity;
 
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btSensor;
     @InjectView(R.id.bt_picture)
     Button btPicture;
+    @InjectView(R.id.bt_path)
+    Button btPath;
 
 
     private Context mContext;
@@ -47,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btSensor.setOnClickListener(this);
 
         btPicture.setOnClickListener(this);
+        btPath.setOnClickListener(this);
     }
 
 
@@ -76,6 +80,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 startActivity(intent);
                 break;
+            case  R.id.bt_path:
+                intent = new Intent(mContext, PathActivity.class);
+
+                startActivity(intent);
+                break;
+
         }
     }
 }

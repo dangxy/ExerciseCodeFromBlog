@@ -3,9 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <com.dxy.exercisecodefromblog.path.PathView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <com.dxy.exercisecodefromblog.picture.PictureView
-        android:layout_margin="50dp"
-        android:layout_width="300dp"
-        android:layout_height="300dp" />
 </RelativeLayout>
