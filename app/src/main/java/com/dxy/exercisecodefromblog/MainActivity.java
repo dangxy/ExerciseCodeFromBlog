@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.dxy.exercisecodefromblog.activity.CustomViewActivity;
 import com.dxy.exercisecodefromblog.camera.TakeCameraActivity;
+import com.dxy.exercisecodefromblog.mvp.bean.activity.UserLoginActivity;
 import com.dxy.exercisecodefromblog.path.PathActivity;
 import com.dxy.exercisecodefromblog.picture.PictureActivity;
 import com.dxy.exercisecodefromblog.sensor.SensorActivity;
@@ -28,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btPicture;
     @InjectView(R.id.bt_path)
     Button btPath;
+    @InjectView(R.id.bt_mvp_login)
+    Button btMvpLogin;
 
 
     private Context mContext;
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btPicture.setOnClickListener(this);
         btPath.setOnClickListener(this);
+        btMvpLogin.setOnClickListener(this);
     }
 
 
@@ -80,12 +84,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 startActivity(intent);
                 break;
-            case  R.id.bt_path:
+            case R.id.bt_path:
                 intent = new Intent(mContext, PathActivity.class);
 
                 startActivity(intent);
                 break;
+            case R.id.bt_mvp_login:
+                intent = new Intent(mContext, UserLoginActivity.class);
 
+                startActivity(intent);
+                break;
         }
     }
 }
