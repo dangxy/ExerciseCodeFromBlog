@@ -25,7 +25,8 @@
         <activity android:name=".sensor.SensorActivity" />
         <activity android:name=".picture.PictureActivity" />
         <activity android:name=".path.PathActivity" />
-        <activity android:name=".mvp.bean.activity.UserLoginActivity"></activity>
+        <activity android:name=".mvp.bean.activity.UserLoginActivity" />
+        <activity android:name=".takephoto.PhotoActivity"></activity>
     </application>
 
 </manifest>

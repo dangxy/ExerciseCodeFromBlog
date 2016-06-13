@@ -13,6 +13,7 @@ import com.dxy.exercisecodefromblog.mvp.bean.activity.UserLoginActivity;
 import com.dxy.exercisecodefromblog.path.PathActivity;
 import com.dxy.exercisecodefromblog.picture.PictureActivity;
 import com.dxy.exercisecodefromblog.sensor.SensorActivity;
+import com.dxy.exercisecodefromblog.takephoto.PhotoActivity;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -31,6 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btPath;
     @InjectView(R.id.bt_mvp_login)
     Button btMvpLogin;
+    @InjectView(R.id.bt_take_photo)
+    Button btTakePhoto;
 
 
     private Context mContext;
@@ -55,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btPicture.setOnClickListener(this);
         btPath.setOnClickListener(this);
         btMvpLogin.setOnClickListener(this);
+        btTakePhoto.setOnClickListener(this);
     }
 
 
@@ -94,6 +98,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 startActivity(intent);
                 break;
+
+            case R.id.bt_take_photo:
+                intent = new Intent(mContext, PhotoActivity.class);
+                startActivity(intent);
         }
     }
 }

@@ -50,4 +50,12 @@
         android:layout_margin="15dp"
         android:text="mvp_login"
         android:minHeight="0dp"/>
+
+    <Button
+        android:id="@+id/bt_take_photo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:text="获取照片"
+        android:minHeight="0dp"/>
 </LinearLayout>
