@@ -15,6 +15,7 @@ import com.dxy.exercisecodefromblog.path.PathActivity;
 import com.dxy.exercisecodefromblog.picture.PictureActivity;
 import com.dxy.exercisecodefromblog.sensor.SensorActivity;
 import com.dxy.exercisecodefromblog.takephoto.PhotoActivity;
+import com.dxy.exercisecodefromblog.takephoto.PictureRotateActivity;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -118,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.bt_picture_rotate:
-                intent  = new Intent(mContext,PictureActivity.class);
+                intent  = new Intent(mContext, PictureRotateActivity.class);
                 startActivity(intent);
 
                 break;

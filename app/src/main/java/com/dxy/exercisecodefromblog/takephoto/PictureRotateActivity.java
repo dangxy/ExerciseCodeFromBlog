@@ -22,7 +22,7 @@ import java.util.List;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class PictureActivity extends AppCompatActivity {
+public class PictureRotateActivity extends AppCompatActivity {
 
     @InjectView(R.id.pic_list_view)
     ListView picListView;
