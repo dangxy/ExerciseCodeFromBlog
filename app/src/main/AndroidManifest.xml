@@ -27,7 +27,8 @@
         <activity android:name=".path.PathActivity" />
         <activity android:name=".mvp.bean.activity.UserLoginActivity" />
         <activity android:name=".takephoto.PhotoActivity" />
-        <activity android:name=".factory.LayoutInflaterActivity"></activity>
+        <activity android:name=".factory.LayoutInflaterActivity" />
+        <activity android:name=".takephoto.PictureActivity"></activity>
     </application>
 
 </manifest>

@@ -65,4 +65,11 @@
         android:layout_margin="1dp"
         android:text="Layout inflater"
         android:minHeight="0dp"/>
+    <Button
+        android:id="@+id/bt_picture_rotate"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="1dp"
+        android:text="图片3D旋转"
+        android:minHeight="0dp"/>
 </LinearLayout>

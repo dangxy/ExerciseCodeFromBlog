@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btTakePhoto;
     @InjectView(R.id.bt_layout_inflater)
     Button btLayoutInflater;
+    @InjectView(R.id.bt_picture_rotate)
+    Button btPictureRotate;
 
 
     private Context mContext;
@@ -64,6 +66,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btTakePhoto.setOnClickListener(this);
 
         btLayoutInflater.setOnClickListener(this);
+        btPictureRotate.setOnClickListener(this);
     }
 
 
@@ -113,6 +116,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(mContext, LayoutInflaterActivity.class);
 
                 startActivity(intent);
+                break;
+            case R.id.bt_picture_rotate:
+                intent  = new Intent(mContext,PictureActivity.class);
+                startActivity(intent);
+
                 break;
         }
     }
