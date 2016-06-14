@@ -142,7 +142,6 @@ public class PhotoActivity extends AppCompatActivity implements View.OnClickList
                     uri = Uri.fromFile(new File(photofile, getHeadPictureName()));
                     intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
                     startActivityForResult(intent, 3);
-
                     break;
                 case 3:
                     if (data != null) {

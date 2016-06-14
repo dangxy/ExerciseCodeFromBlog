@@ -9,53 +9,60 @@
     <Button
         android:id="@+id/bt_circle_view"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="15dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
         android:text="自定义view"
         android:minHeight="0dp"/>
 
     <Button
         android:id="@+id/bt_picture"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="15dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
         android:text="自定义picture"
         android:minHeight="0dp"/>
     <Button
         android:id="@+id/bt_path"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="15dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
         android:text="自定义view-path"
         android:minHeight="0dp"/>
     <Button
         android:id="@+id/bt_camera"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="15dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
         android:text="相机练习"
         android:minHeight="0dp"/>
 
     <Button
         android:id="@+id/bt_sensor"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="15dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
         android:text="摇一摇"
         android:minHeight="0dp"/>
     <Button
         android:id="@+id/bt_mvp_login"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="15dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
         android:text="mvp_login"
         android:minHeight="0dp"/>
 
     <Button
         android:id="@+id/bt_take_photo"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_margin="15dp"
+        android:layout_height="40dp"
+        android:layout_margin="1dp"
         android:text="获取照片"
+        android:minHeight="0dp"/>
+    <Button
+        android:id="@+id/bt_layout_inflater"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="1dp"
+        android:text="Layout inflater"
         android:minHeight="0dp"/>
 </LinearLayout>

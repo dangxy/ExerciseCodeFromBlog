@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import com.dxy.exercisecodefromblog.activity.CustomViewActivity;
 import com.dxy.exercisecodefromblog.camera.TakeCameraActivity;
+import com.dxy.exercisecodefromblog.factory.LayoutInflaterActivity;
 import com.dxy.exercisecodefromblog.mvp.bean.activity.UserLoginActivity;
 import com.dxy.exercisecodefromblog.path.PathActivity;
 import com.dxy.exercisecodefromblog.picture.PictureActivity;
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btMvpLogin;
     @InjectView(R.id.bt_take_photo)
     Button btTakePhoto;
+    @InjectView(R.id.bt_layout_inflater)
+    Button btLayoutInflater;
 
 
     private Context mContext;
@@ -59,6 +62,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btPath.setOnClickListener(this);
         btMvpLogin.setOnClickListener(this);
         btTakePhoto.setOnClickListener(this);
+
+        btLayoutInflater.setOnClickListener(this);
     }
 
 
@@ -102,6 +107,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bt_take_photo:
                 intent = new Intent(mContext, PhotoActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.bt_layout_inflater:
+                intent = new Intent(mContext, LayoutInflaterActivity.class);
+
+                startActivity(intent);
+                break;
         }
     }
 }
