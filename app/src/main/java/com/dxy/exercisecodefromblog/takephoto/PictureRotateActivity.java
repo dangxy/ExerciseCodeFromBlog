@@ -2,6 +2,7 @@ package com.dxy.exercisecodefromblog.takephoto;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.animation.AccelerateInterpolator;
@@ -10,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
 import com.dxy.exercisecodefromblog.Picture;
 import com.dxy.exercisecodefromblog.R;
@@ -31,6 +33,8 @@ public class PictureRotateActivity extends AppCompatActivity {
     @InjectView(R.id.layout)
     RelativeLayout layout;
 
+
+    private long exit_time;
 
     private PictureAdapter adapter;
 
@@ -184,4 +188,42 @@ public class PictureRotateActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+
+        if(event.getKeyCode()==KeyEvent.KEYCODE_BACK&&event.getKeyCode()==KeyEvent.ACTION_DOWN){
+
+            if(System.currentTimeMillis()-exit_time>2000){
+                Toast.makeText(getApplicationContext(),"再点一次退出程序",Toast.LENGTH_SHORT).show();
+
+                exit_time=System.currentTimeMillis();
+            }else{
+                finish();
+                System.exit(0);
+            }
+
+            return true;
+        }
+        return super.dispatchKeyEvent(event);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+
+        if(event.getKeyCode()==KeyEvent.KEYCODE_BACK&&event.getKeyCode()==KeyEvent.ACTION_DOWN){
+
+            if(System.currentTimeMillis()-exit_time>2000){
+                Toast.makeText(getApplicationContext(),"再点一次退出程序",Toast.LENGTH_SHORT).show();
+
+                exit_time=System.currentTimeMillis();
+            }else{
+                finish();
+                System.exit(0);
+            }
+
+            return true;
+        }
+
+        return super.onKeyDown(keyCode, event);
+    }
 }
