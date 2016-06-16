@@ -28,7 +28,13 @@
         <activity android:name=".mvp.bean.activity.UserLoginActivity" />
         <activity android:name=".takephoto.PhotoActivity" />
         <activity android:name=".factory.LayoutInflaterActivity" />
-        <activity android:name=".takephoto.PictureRotateActivity"></activity>
+        <activity android:name=".takephoto.PictureRotateActivity" />
+        <activity android:name=".menu.MenuActivity" />
+        <activity
+            android:name=".menu.Menu2Activity"
+            android:label="@string/title_activity_menu2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".notifications.NotificationsActivity"></activity>
     </application>
 
 </manifest>

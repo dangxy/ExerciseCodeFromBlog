@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ExerciseCodeFromBlog</string>
+    <string name="title_activity_menu2">Menu2Activity</string>
 </resources>

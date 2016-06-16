@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
-
-
 
     <Button
         android:id="@+id/bt_circle_view"
@@ -66,10 +68,28 @@
         android:text="Layout inflater"
         android:minHeight="0dp"/>
     <Button
-        android:id="@+id/bt_picture_rotate"
+    android:id="@+id/bt_picture_rotate"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_margin="1dp"
+    android:text="图片3D旋转"
+    android:minHeight="0dp"/>
+    <Button
+        android:id="@+id/bt_menu"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_margin="1dp"
-        android:text="图片3D旋转"
+        android:text="menu的使用"
         android:minHeight="0dp"/>
+
+    <Button
+        android:id="@+id/bt_notifications"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="1dp"
+        android:text="消息通知栏"
+        android:minHeight="0dp"/>
+
 </LinearLayout>
+
+</ScrollView>

@@ -10,7 +10,9 @@ import android.widget.Button;
 import com.dxy.exercisecodefromblog.activity.CustomViewActivity;
 import com.dxy.exercisecodefromblog.camera.TakeCameraActivity;
 import com.dxy.exercisecodefromblog.factory.LayoutInflaterActivity;
+import com.dxy.exercisecodefromblog.menu.MenuActivity;
 import com.dxy.exercisecodefromblog.mvp.bean.activity.UserLoginActivity;
+import com.dxy.exercisecodefromblog.notifications.NotificationsActivity;
 import com.dxy.exercisecodefromblog.path.PathActivity;
 import com.dxy.exercisecodefromblog.picture.PictureActivity;
 import com.dxy.exercisecodefromblog.sensor.SensorActivity;
@@ -40,6 +42,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btLayoutInflater;
     @InjectView(R.id.bt_picture_rotate)
     Button btPictureRotate;
+    @InjectView(R.id.bt_menu)
+    Button btMenu;
+    @InjectView(R.id.bt_notifications)
+    Button btNotifications;
 
 
     private Context mContext;
@@ -68,6 +74,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btLayoutInflater.setOnClickListener(this);
         btPictureRotate.setOnClickListener(this);
+        btMenu.setOnClickListener(this);
+
+        btNotifications.setOnClickListener(this);
     }
 
 
@@ -119,9 +128,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.bt_picture_rotate:
-                intent  = new Intent(mContext, PictureRotateActivity.class);
+                intent = new Intent(mContext, PictureRotateActivity.class);
                 startActivity(intent);
 
+                break;
+            case R.id.bt_menu:
+                intent = new Intent(mContext, MenuActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.bt_notifications:
+                intent =new Intent(mContext, NotificationsActivity.class);
+
+                startActivity(intent);
                 break;
         }
     }
