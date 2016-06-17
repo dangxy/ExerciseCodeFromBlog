@@ -6,6 +6,7 @@
         android:name="android.permission.CAMERA"
         android:required="true" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -34,7 +35,8 @@
             android:name=".menu.Menu2Activity"
             android:label="@string/title_activity_menu2"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".notifications.NotificationsActivity"></activity>
+        <activity android:name=".notifications.NotificationsActivity" />
+        <activity android:name=".Recycler.RecyclerViewActivity"></activity>
     </application>
 
 </manifest>
