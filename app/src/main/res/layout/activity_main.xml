@@ -90,6 +90,13 @@
         android:text="消息通知栏"
         android:minHeight="0dp"/>
 
+    <Button
+        android:id="@+id/rv_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="recycler view"
+        />
+
 </LinearLayout>
 
 </ScrollView>

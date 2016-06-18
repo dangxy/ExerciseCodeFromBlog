@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.dxy.exercisecodefromblog.Recycler.RecyclerViewActivity;
 import com.dxy.exercisecodefromblog.activity.CustomViewActivity;
 import com.dxy.exercisecodefromblog.camera.TakeCameraActivity;
 import com.dxy.exercisecodefromblog.factory.LayoutInflaterActivity;
@@ -46,6 +47,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btMenu;
     @InjectView(R.id.bt_notifications)
     Button btNotifications;
+    @InjectView(R.id.rv_recycler_view)
+    Button rvRecyclerView;
 
 
     private Context mContext;
@@ -77,6 +80,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btMenu.setOnClickListener(this);
 
         btNotifications.setOnClickListener(this);
+        rvRecyclerView.setOnClickListener(this);
     }
 
 
@@ -137,8 +141,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
                 break;
             case R.id.bt_notifications:
-                intent =new Intent(mContext, NotificationsActivity.class);
+                intent = new Intent(mContext, NotificationsActivity.class);
 
+                startActivity(intent);
+                break;
+
+            case R.id.rv_recycler_view:
+                intent = new Intent(mContext, RecyclerViewActivity.class);
                 startActivity(intent);
                 break;
         }
