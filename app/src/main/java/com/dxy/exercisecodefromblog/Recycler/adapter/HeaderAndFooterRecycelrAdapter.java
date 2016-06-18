@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import com.dxy.exercisecodefromblog.R;
 
+import java.util.ArrayList;
+
 /**
  * Created by author_dang on 16/6/18.
  */
@@ -20,30 +22,18 @@ public class HeaderAndFooterRecycelrAdapter extends RecyclerView.Adapter<Recycle
     public static final int ITEM_TYPE_CONTENT = 1;
     public static final int ITEM_TYPE_BOTTOM = 2;
     //模拟数据
-    public String[] texts = {"高圆圆", "刘亦菲",
-            "刘涛",
-            "郭碧婷",
-            "范冰冰",
-            "汤唯",
-            "周迅",
-            "唐嫣",
-            "刘诗诗",
-            "Angelababy", "郭碧婷",
-            "范冰冰",
-            "汤唯",
-            "周迅",
-            "唐嫣",
-            "刘诗诗",
-            "Angelababy"};
+    public ArrayList<String> texts;
     private LayoutInflater mLayoutInflater;
     private Context mContext;
     private int mHeaderCount = 1;//头部View个数
     private int mBottomCount = 1;//底部View个数
 
 
-    public HeaderAndFooterRecycelrAdapter(Context mContext) {
+    public HeaderAndFooterRecycelrAdapter(Context mContext,ArrayList<String> mtexts) {
         this.mContext = mContext;
         mLayoutInflater = LayoutInflater.from(mContext);
+
+        this.texts=mtexts;
 
     }
 
@@ -52,7 +42,7 @@ public class HeaderAndFooterRecycelrAdapter extends RecyclerView.Adapter<Recycle
      */
 
     public int getContentItemCount() {
-        return texts.length;
+        return texts.size();
 
     }
 
@@ -83,7 +73,7 @@ public class HeaderAndFooterRecycelrAdapter extends RecyclerView.Adapter<Recycle
 
 
         if (holder instanceof ContentRecyclerViewHolder) {
-            ((ContentRecyclerViewHolder) holder).textView.setText(texts[position-mHeaderCount]);
+            ((ContentRecyclerViewHolder) holder).textView.setText(texts.get(position-mHeaderCount));
         } else if (holder instanceof HeaderRecyclerViewHolder) {
 
         } else if (holder instanceof FooterRecyclerViewHolder) {

@@ -12,53 +12,55 @@ import android.widget.Toast;
 
 import com.dxy.exercisecodefromblog.R;
 
+import java.util.ArrayList;
+
 /**
  * Created by author_dang on 16/6/17.
  */
-public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.myRecyclerViewAdapterViewHolder> {
+public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private LayoutInflater mLayoutInflater;
 
     private Context mContext;
 
-    private String[] mTitles;
-
-    private int[] mPictures;
+    private ArrayList<String> mTitles;
 
 
-    public MyRecyclerViewAdapter(Context context, String[] title, int[] pic) {
+
+    public MyRecyclerViewAdapter(Context context, ArrayList<String> title) {
 
         this.mContext = context;
         this.mTitles = title;
-        this.mPictures = pic;
 
         mLayoutInflater = LayoutInflater.from(context);
     }
 
     @Override
-    public myRecyclerViewAdapterViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return new myRecyclerViewAdapterViewHolder(mLayoutInflater.inflate(R.layout.item_recycler_view_layout, parent, false));
     }
 
     @Override
-    public void onBindViewHolder(myRecyclerViewAdapterViewHolder holder, final int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
 
-        holder.imageView.setImageResource(mPictures[position]);
+        if(holder instanceof myRecyclerViewAdapterViewHolder) {
 
-        holder.textView.setText(mTitles[position]);
+            ((myRecyclerViewAdapterViewHolder)holder).imageView.setImageResource(R.mipmap.a);
 
-        holder.cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(mContext, position + "", Toast.LENGTH_SHORT).show();
-            }
-        });
+            ((myRecyclerViewAdapterViewHolder)holder).textView.setText(mTitles.get(position));
 
+            ((myRecyclerViewAdapterViewHolder)holder).cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Toast.makeText(mContext, position + "", Toast.LENGTH_SHORT).show();
+                }
+            });
+        }
 
     }
 
     @Override
     public int getItemCount() {
-        return mTitles == null ? 0 : mTitles.length;
+        return mTitles == null ? 0 : mTitles.size();
     }
 
     public static class myRecyclerViewAdapterViewHolder extends RecyclerView.ViewHolder {
