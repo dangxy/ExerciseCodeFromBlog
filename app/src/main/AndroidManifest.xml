@@ -36,7 +36,8 @@
             android:label="@string/title_activity_menu2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".notifications.NotificationsActivity" />
-        <activity android:name=".Recycler.RecyclerViewActivity"></activity>
+        <activity android:name=".Recycler.RecyclerViewActivity" />
+        <activity android:name=".springview.SpringViewActivity"></activity>
     </application>
 
 </manifest>
