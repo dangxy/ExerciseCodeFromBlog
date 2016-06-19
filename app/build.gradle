@@ -29,5 +29,7 @@ dependencies {
     compile 'com.android.support:cardview-v7:23.1.1'
     compile 'com.chanven.lib:cptr:1.0.0'
     compile 'com.liaoinstan.springview:library:1.2.5'
+    compile 'com.jude:utils:1.2.1'
+    compile 'com.jude:rollviewpager:1.3.2'
 
 }

@@ -20,6 +20,7 @@ import com.dxy.exercisecodefromblog.sensor.SensorActivity;
 import com.dxy.exercisecodefromblog.springview.SpringViewActivity;
 import com.dxy.exercisecodefromblog.takephoto.PhotoActivity;
 import com.dxy.exercisecodefromblog.takephoto.PictureRotateActivity;
+import com.dxy.exercisecodefromblog.viewpager.AutoViewpagerActivity;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -52,6 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button rvRecyclerView;
     @InjectView(R.id.rv_spring_view)
     Button rvSpringView;
+    @InjectView(R.id.rv_auto_view_pager)
+    Button rvAutoViewPager;
 
 
     private Context mContext;
@@ -86,6 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rvRecyclerView.setOnClickListener(this);
 
         rvSpringView.setOnClickListener(this);
+        rvAutoViewPager.setOnClickListener(this);
     }
 
 
@@ -157,6 +161,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.rv_spring_view:
                 intent = new Intent(mContext, SpringViewActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.rv_auto_view_pager:
+                intent = new Intent(mContext, AutoViewpagerActivity.class);
                 startActivity(intent);
                 break;
         }

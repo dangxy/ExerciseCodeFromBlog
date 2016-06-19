@@ -37,7 +37,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".notifications.NotificationsActivity" />
         <activity android:name=".Recycler.RecyclerViewActivity" />
-        <activity android:name=".springview.SpringViewActivity"></activity>
+        <activity android:name=".springview.SpringViewActivity" />
+        <activity android:name=".viewpager.AutoViewpagerActivity"></activity>
     </application>
 
 </manifest>
