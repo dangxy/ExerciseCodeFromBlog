@@ -17,6 +17,7 @@ import com.dxy.exercisecodefromblog.notifications.NotificationsActivity;
 import com.dxy.exercisecodefromblog.path.PathActivity;
 import com.dxy.exercisecodefromblog.picture.PictureActivity;
 import com.dxy.exercisecodefromblog.sensor.SensorActivity;
+import com.dxy.exercisecodefromblog.springview.SpringViewActivity;
 import com.dxy.exercisecodefromblog.takephoto.PhotoActivity;
 import com.dxy.exercisecodefromblog.takephoto.PictureRotateActivity;
 
@@ -49,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btNotifications;
     @InjectView(R.id.rv_recycler_view)
     Button rvRecyclerView;
+    @InjectView(R.id.rv_spring_view)
+    Button rvSpringView;
 
 
     private Context mContext;
@@ -81,6 +84,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btNotifications.setOnClickListener(this);
         rvRecyclerView.setOnClickListener(this);
+
+        rvSpringView.setOnClickListener(this);
     }
 
 
@@ -148,6 +153,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.rv_recycler_view:
                 intent = new Intent(mContext, RecyclerViewActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.rv_spring_view:
+                intent = new Intent(mContext, SpringViewActivity.class);
                 startActivity(intent);
                 break;
         }
