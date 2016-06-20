@@ -109,6 +109,12 @@
         android:layout_height="40dp"
         android:text="auto_view_pager"
         />
+    <Button
+        android:id="@+id/cv_crop_view"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="crop_view"
+        />
 </LinearLayout>
 
 </ScrollView>

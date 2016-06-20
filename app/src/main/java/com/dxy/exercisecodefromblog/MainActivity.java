@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.dxy.exercisecodefromblog.Recycler.RecyclerViewActivity;
 import com.dxy.exercisecodefromblog.activity.CustomViewActivity;
 import com.dxy.exercisecodefromblog.camera.TakeCameraActivity;
+import com.dxy.exercisecodefromblog.cropview.SimpleCropViewActivity;
 import com.dxy.exercisecodefromblog.factory.LayoutInflaterActivity;
 import com.dxy.exercisecodefromblog.menu.MenuActivity;
 import com.dxy.exercisecodefromblog.mvp.bean.activity.UserLoginActivity;
@@ -55,6 +56,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button rvSpringView;
     @InjectView(R.id.rv_auto_view_pager)
     Button rvAutoViewPager;
+    @InjectView(R.id.cv_crop_view)
+    Button cvCropView;
 
 
     private Context mContext;
@@ -90,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         rvSpringView.setOnClickListener(this);
         rvAutoViewPager.setOnClickListener(this);
+        cvCropView.setOnClickListener(this);
     }
 
 
@@ -165,6 +169,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.rv_auto_view_pager:
                 intent = new Intent(mContext, AutoViewpagerActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.cv_crop_view:
+                intent = new Intent(mContext, SimpleCropViewActivity.class);
                 startActivity(intent);
                 break;
         }
