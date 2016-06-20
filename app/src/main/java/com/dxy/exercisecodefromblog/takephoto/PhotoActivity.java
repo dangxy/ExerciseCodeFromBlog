@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -15,10 +16,13 @@ import com.dxy.exercisecodefromblog.R;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import me.iwf.photopicker.PhotoPickerActivity;
+import me.iwf.photopicker.utils.PhotoPickerIntent;
 
 public class PhotoActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -28,8 +32,12 @@ public class PhotoActivity extends AppCompatActivity implements View.OnClickList
     Button takePhotoTuKu;
     @InjectView(R.id.iv_photo_view)
     ImageView ivPhotoView;
+    @InjectView(R.id.choose_photo)
+    Button choosePhoto;
 
     private Uri imageUrl;
+
+    public  static final int REQUEST_CODE= 1001;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +52,7 @@ public class PhotoActivity extends AppCompatActivity implements View.OnClickList
         takePhotoCamera.setOnClickListener(this);
 
         takePhotoTuKu.setOnClickListener(this);
+        choosePhoto.setOnClickListener(this);
     }
 
     @Override
@@ -83,6 +92,15 @@ public class PhotoActivity extends AppCompatActivity implements View.OnClickList
                 } catch (Exception e) {
                     e.getStackTrace();
                 }
+                break;
+            case R.id.choose_photo:
+                PhotoPickerIntent intent = new PhotoPickerIntent(PhotoActivity.this);
+                intent.setPhotoCount(9);
+                intent.setShowCamera(true);
+                intent.setShowGif(true);
+                startActivityForResult(intent, REQUEST_CODE);
+
+
                 break;
 
         }
@@ -152,14 +170,33 @@ public class PhotoActivity extends AppCompatActivity implements View.OnClickList
 
                         resultIntent.putExtra("myBitmap", myBitmap);
 
-                        setResult(1,resultIntent);
+                        setResult(1, resultIntent);
 
 
                     }
                     break;
+                case REQUEST_CODE:
+                    if (data != null) {
+                        ArrayList<String> photos =
+                                data.getStringArrayListExtra(PhotoPickerActivity.KEY_SELECTED_PHOTOS);
+
+
+                        if(photos.size()>0){
+
+
+                            for(int i =0;i<photos.size();i++){
+
+                                Log.e("dang",photos.get(i));
+                            }
+
+                        }
+
+                    }
+
+                    break;
 
             }
-        }else if(resultCode==1){
+        } else if (resultCode == 1) {
             switch (requestCode) {
                 case 1:
                     Bundle bundle = intent.getExtras();
@@ -167,10 +204,15 @@ public class PhotoActivity extends AppCompatActivity implements View.OnClickList
                     break;
 
                 default:
-                    break;}
+                    break;
+            }
 
 
         }
+        else if(requestCode==REQUEST_CODE){
+
+            }
+
 
     }
 }

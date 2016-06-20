@@ -19,6 +19,14 @@
         android:maxHeight="0dp"
         android:text="图库"
         android:textSize="20dp"/>
+    <Button
+        android:id="@+id/choose_photo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:maxHeight="0dp"
+        android:text="选择照片"
+        android:textSize="20dp"/>
+
 
     <ImageView
         android:id="@+id/iv_photo_view"
@@ -28,5 +36,7 @@
         android:scaleType="fitXY"
 
         android:background="@mipmap/ic_launcher"/>
+
+
 
 </LinearLayout>
