@@ -3,6 +3,7 @@ package com.dxy.exercisecodefromblog.cropview;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
@@ -96,7 +97,14 @@ public class SimpleCropViewActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
+                if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
+                    startActivityForResult(new Intent(Intent.ACTION_GET_CONTENT).setType("image/*"), 1001);
+                } else {
+                    Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+                    intent.addCategory(Intent.CATEGORY_OPENABLE);
+                    intent.setType("image/*");
+                    startActivityForResult(intent, 1002);
+                }
             }
         });
 
@@ -129,6 +137,40 @@ public class SimpleCropViewActivity extends AppCompatActivity {
                     }
                 });
             }
+        } else if(requestCode==1001){
+            originalUri = data.getData();
+            Toast.makeText(getApplicationContext(), originalUri + "", Toast.LENGTH_SHORT).show();
+            cropImageView.setImageURI(originalUri);
+            if (originalUri != null) {
+                cropImageView.startLoad(originalUri, new LoadCallback() {
+                    @Override
+                    public void onSuccess() {
+                    }
+
+                    @Override
+                    public void onError() {
+                    }
+                });
+            }
+
+
+        }else if(requestCode==1002){
+            originalUri = data.getData();
+            Toast.makeText(getApplicationContext(), originalUri + "", Toast.LENGTH_SHORT).show();
+            cropImageView.setImageURI(originalUri);
+            if (originalUri != null) {
+                cropImageView.startLoad(originalUri, new LoadCallback() {
+                    @Override
+                    public void onSuccess() {
+                    }
+
+                    @Override
+                    public void onError() {
+                    }
+                });
+            }
+
+
         }
     }
 
