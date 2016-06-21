@@ -7,7 +7,7 @@
         android:required="true" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -40,13 +40,16 @@
         <activity android:name=".Recycler.RecyclerViewActivity" />
         <activity android:name=".springview.SpringViewActivity" />
         <activity android:name=".viewpager.AutoViewpagerActivity" />
-        <activity android:name=".cropview.SimpleCropViewActivity"></activity>
-        <activity android:name="me.iwf.photopicker.PhotoPickerActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"
-            />
-
-        <activity android:name="me.iwf.photopicker.PhotoPagerActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".cropview.SimpleCropViewActivity" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".activity.LifeCycleActivity" />
+        <activity android:name=".activity.TargetActivity"
+            android:theme="@android:style/Theme.Dialog"></activity>
     </application>
 
 </manifest>

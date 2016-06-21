@@ -115,6 +115,13 @@
         android:layout_height="40dp"
         android:text="crop_view"
         />
+
+    <Button
+        android:id="@+id/bt_circle_activity"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="life circle activity"
+        />
 </LinearLayout>
 
 </ScrollView>
