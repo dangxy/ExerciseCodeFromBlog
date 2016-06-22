@@ -15,6 +15,7 @@ import com.dxy.exercisecodefromblog.cropview.SimpleCropViewActivity;
 import com.dxy.exercisecodefromblog.factory.LayoutInflaterActivity;
 import com.dxy.exercisecodefromblog.menu.MenuActivity;
 import com.dxy.exercisecodefromblog.mvp.bean.activity.UserLoginActivity;
+import com.dxy.exercisecodefromblog.navigationview.NavigationActivity;
 import com.dxy.exercisecodefromblog.notifications.NotificationsActivity;
 import com.dxy.exercisecodefromblog.path.PathActivity;
 import com.dxy.exercisecodefromblog.picture.PictureActivity;
@@ -61,6 +62,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button cvCropView;
     @InjectView(R.id.bt_circle_activity)
     Button btCircleActivity;
+    @InjectView(R.id.bt_navigation_view)
+    Button btNavigationView;
 
 
     private Context mContext;
@@ -98,6 +101,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         rvAutoViewPager.setOnClickListener(this);
         cvCropView.setOnClickListener(this);
         btCircleActivity.setOnClickListener(this);
+        btNavigationView.setOnClickListener(this);
     }
 
 
@@ -179,9 +183,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(mContext, SimpleCropViewActivity.class);
                 startActivity(intent);
                 break;
-            case  R.id.bt_circle_activity:
+            case R.id.bt_circle_activity:
                 intent = new Intent(mContext, LifeCycleActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.bt_navigation_view:
+                intent = new Intent(mContext, NavigationActivity.class);
+                startActivity(intent);
+
                 break;
         }
     }

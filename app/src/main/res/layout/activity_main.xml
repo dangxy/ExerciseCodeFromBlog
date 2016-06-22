@@ -117,10 +117,16 @@
         />
 
     <Button
-        android:id="@+id/bt_circle_activity"
+    android:id="@+id/bt_circle_activity"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:text="life circle activity"
+    />
+    <Button
+        android:id="@+id/bt_navigation_view"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:text="life circle activity"
+        android:text="navigation_view"
         />
 </LinearLayout>
 

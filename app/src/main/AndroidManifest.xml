@@ -48,8 +48,13 @@
             android:name="me.iwf.photopicker.PhotoPagerActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".activity.LifeCycleActivity" />
-        <activity android:name=".activity.TargetActivity"
-            android:theme="@android:style/Theme.Dialog"></activity>
+        <activity
+            android:name=".activity.TargetActivity"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".navigationview.NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
