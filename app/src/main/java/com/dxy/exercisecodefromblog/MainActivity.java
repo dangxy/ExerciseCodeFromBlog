@@ -23,6 +23,7 @@ import com.dxy.exercisecodefromblog.sensor.SensorActivity;
 import com.dxy.exercisecodefromblog.springview.SpringViewActivity;
 import com.dxy.exercisecodefromblog.takephoto.PhotoActivity;
 import com.dxy.exercisecodefromblog.takephoto.PictureRotateActivity;
+import com.dxy.exercisecodefromblog.toolbar.ToolBarActivity;
 import com.dxy.exercisecodefromblog.viewpager.AutoViewpagerActivity;
 
 import butterknife.ButterKnife;
@@ -64,6 +65,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button btCircleActivity;
     @InjectView(R.id.bt_navigation_view)
     Button btNavigationView;
+    @InjectView(R.id.bt_tool_bar)
+    Button btToolBar;
 
 
     private Context mContext;
@@ -102,6 +105,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         cvCropView.setOnClickListener(this);
         btCircleActivity.setOnClickListener(this);
         btNavigationView.setOnClickListener(this);
+
+        btToolBar.setOnClickListener(this);
     }
 
 
@@ -191,6 +196,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 intent = new Intent(mContext, NavigationActivity.class);
                 startActivity(intent);
 
+                break;
+            case R.id.bt_tool_bar:
+                intent =  new Intent(mContext, ToolBarActivity.class);
+                startActivity(intent);
                 break;
         }
     }
