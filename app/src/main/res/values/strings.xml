@@ -10,4 +10,10 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <array name="string_music">
+        <item>立即欣赏</item>
+        <item>我的音乐</item>
+        <item>我的乐库</item>
+        <item>我喜欢的</item>
+    </array>
 </resources>

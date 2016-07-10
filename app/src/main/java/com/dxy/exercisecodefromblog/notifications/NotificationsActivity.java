@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.NotificationCompat;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 
 import com.dxy.exercisecodefromblog.R;
 
@@ -23,6 +24,8 @@ public class NotificationsActivity extends AppCompatActivity {
     Button btSend;
     @InjectView(R.id.bt_cancel)
     Button btCancel;
+    @InjectView(R.id.cb_check_box)
+    CheckBox cbCheckBox;
 
 
     private NotificationManager mNotificationManager;
@@ -43,11 +46,10 @@ public class NotificationsActivity extends AppCompatActivity {
     private void initData() {
 
 
-
         btSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NotificationCompat.Builder  builder = new NotificationCompat.Builder(mContext);
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(mContext);
 
                 mNotification = builder.setContentTitle("这是通知的标题栏").setContentText("通知的内容").setWhen(System.currentTimeMillis()).setSmallIcon(R.mipmap.ic_launcher).setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher)).build();
 
@@ -63,7 +65,7 @@ public class NotificationsActivity extends AppCompatActivity {
                 PendingIntent mContentIntent = PendingIntent.getActivity(mContext, 0, intent, 0);
 
                 builder.setContentIntent(mContentIntent);
-                mNotificationManager.notify(0,mNotification);
+                mNotificationManager.notify(0, mNotification);
 
             }
         });
@@ -72,6 +74,14 @@ public class NotificationsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 mNotificationManager.cancel(0);
+            }
+        });
+
+
+        cbCheckBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //cbCheckBox.setChecked(!cbCheckBox.isChecked());
             }
         });
 
